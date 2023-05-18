@@ -7,3 +7,8 @@ management:
       exposure:
         include: "*"
         exclude: "env,beans"
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
