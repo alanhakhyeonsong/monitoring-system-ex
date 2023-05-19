@@ -19,14 +19,23 @@ repositories {
 }
 
 dependencies {
+    // spring boot
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    compileOnly 'org.projectlombok:lombok'
+
+    // prometheus
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+
+    // h2 database
     runtimeOnly 'com.h2database:h2'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    // test에서 lombok 활성화
     testCompileOnly 'org.projectlombok:lombok'
     testAnnotationProcessor 'org.projectlombok:lombok'
 }
